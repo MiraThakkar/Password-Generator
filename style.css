@@ -1,0 +1,13 @@
+.btn {
+    border-radius:16px;
+}
+
+#password-section {
+
+    height: 200px;
+    border:dashed;
+    border-color:  #dddddd;
+    border-radius:15px;
+}
+
+
