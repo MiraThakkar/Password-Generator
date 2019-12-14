@@ -17,21 +17,21 @@ function generate(){
 
 passwordlengthValue =Number(prompt("Enter Password Length (8 to 128):"));
 if (passwordlengthValue>=8 && passwordlengthValue <= 128) {
-  lowercaseValue = (prompt("Do you want lowercase characters in password? Yes or NO")).toLowerCase();
-  uppercaseValue = (prompt("Do you want uppercase characters in password? Yes or NO")).toLowerCase();
-  numberValue = (prompt("Do you want numbers in password? Yes or NO")).toLowerCase();
-  specialValue = (prompt("Do you want special characters in password? Yes or NO")).toLowerCase();
+  lowercaseValue = (prompt("Do you want lowercase characters in password? Yes (y) or No (n)")).toLowerCase();  
+  uppercaseValue = (prompt("Do you want uppercase characters in password? Yes (y) or No (n)")).toLowerCase();
+  numberValue = (prompt("Do you want numbers in password? Yes (y) or No (n)")).toLowerCase();
+  specialValue = (prompt("Do you want special characters in password? Yes (y) or No (n)")).toLowerCase();
 
-  if (lowercaseValue == "yes") {        
+  if (lowercaseValue.substring(0,1) == "y") {        
     passwordCharSet += lowercase;        
   }
-  if (uppercaseValue == "yes") {
+  if (uppercaseValue.substring(0,1) == "y") {
     passwordCharSet += uppercase;        
   }
-  if (numberValue == "yes") {
+  if (numberValue.substring(0,1) == "y") {
     passwordCharSet += numbers;        
   } 
-  if (specialValue == "yes") {
+  if (specialValue.substring(0,1) == "y") {
     passwordCharSet += punctuation;        
   }
 
