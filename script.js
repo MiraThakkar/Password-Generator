@@ -1,5 +1,7 @@
 //var clipboard = new Clipboard('.copy')
+var password = document.querySelector("#password-lable");
 var copyBtn = document.querySelector("#copy");
+copyBtn.disabled = true ;
 var lowercase = "abcdefghijklmnopqrstuvwxyz",
   uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   numbers = "0123456789",
@@ -40,7 +42,9 @@ if (passwordlengthValue>=8 && passwordlengthValue <= 128) {
         userPassword += passwordCharSet.charAt(Math.floor(Math.random() * passwordCharSet.length));    
     }       
     document.getElementById("password-label").textContent = userPassword;
-    copyBtn.disabled = false;
+    copyBtn.disabled = false ;
+  
+  
   }
 } else {
   alert("Number not between 8 and 128. try again")
@@ -49,23 +53,22 @@ if (passwordlengthValue>=8 && passwordlengthValue <= 128) {
 
 //Copy to Clipboard function
 
-function copyToClipboard() {
-  /* Get the text field */
-  
-  
-
-  alert("I am inside function now: " + userPassword);
-
-  /* Select the text field */
-  copiedPassword.select();
-  copiedPassword.setSelectionRange(0, 99999); /*For mobile devices*/
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("Copied the text: ");
-}
 
 document.getElementById("generate").addEventListener("click", generate);
-document.getElementById("copy").addEventListener("click", copyToClipboard);
+document.getElementById("copy").addEventListener("click", function (){
+
+  var textarea = document.createElement("textarea");
+  var text = document.getElementById("password-label").innerText;
+  if(!text){
+    return;
+  }
+
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+  alert("Password copied to the clipboard");
+  
+}
+);

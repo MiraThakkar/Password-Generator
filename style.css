@@ -1,5 +1,10 @@
+body{
+    background-image: url("vintage-wallpaper.png");
+}
+
 .btn {
     border-radius:16px;
+    
 }
 
 #password-section {
@@ -10,4 +15,38 @@
     border-radius:15px;
 }
 
+.container {
+    background-color: #fff;
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+    padding:20px;
+}
+.jumbotron{
+    background-color:white;
+    height:100px;
+    text-align: center;
+    border-bottom: 1px solid #eceff1;
+    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
 
+}
+
+@media (max-width: 576px){
+    .container{
+        padding: 4rem 2rem;
+        margin: auto;
+    }
+
+    .col-sm-3{
+        height:auto;
+        width:50%;
+        
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+   
+}
