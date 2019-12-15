@@ -54,4 +54,11 @@ body{
        text-align: center;
        font-size: 30px;
    }
+
+   #password-section {
+
+    word-break: break-all;
+    
+   }
+
 }
