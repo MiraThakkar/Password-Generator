@@ -15,7 +15,10 @@ function generate(){
   userPassword = "";
   
 
-passwordlengthValue =Number(prompt("Enter Password Length (8 to 128):"));
+passwordlengthValue = Number(prompt("Enter Password Length (8 to 128):"));
+
+//password validation based on user input
+
 if (passwordlengthValue>=8 && passwordlengthValue <= 128) {
   lowercaseValue = (prompt("Do you want lowercase characters in password? Yes (y) or No (n)")).toLowerCase();  
   uppercaseValue = (prompt("Do you want uppercase characters in password? Yes (y) or No (n)")).toLowerCase();
@@ -50,6 +53,8 @@ if (passwordlengthValue>=8 && passwordlengthValue <= 128) {
   alert("Number not between 8 and 128. try again")
 }
 } //End of Function
+
+
 
 //Copy to Clipboard function
 
